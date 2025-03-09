@@ -71,8 +71,9 @@ Use Markdown headings to clearly identify each task within the notebook.
 
 ### Packages and Libraries
 
-You can use [modules in the standard library](https://en.wikipedia.org/wiki/Standard_library) and any of the following libraries:  
-`numpy`, `scipy`, `matplotlib`, `seaborn`, `pandas`, `statsmodels`, `scikit-learn`.  
+As usual, you can use [modules in the standard library](https://en.wikipedia.org/wiki/Standard_library).  
+You may also use any of the following libraries, including any of their dependencies:  
+`qiskit`, `numpy`, `scipy`, `matplotlib`, `seaborn`, `pandas`, `statsmodels`, `scikit-learn`.  
 Ask before using anything else.  
 
 ### Writing Your Notebook
@@ -92,41 +93,43 @@ Make regular commits to your repository.
 Your commit history should demonstrate how your solution to each task evolved.  
 There should be evidence of incremental improvements, clarifications, and revisions.  
 
-## Marking Scheme
+## Marking Scheme  
 
-Your submission will be graded based on the following five categories.  
-Each category carries equal weight.  
+Your submission will be graded based on five categories, each carrying equal weight.  
+We can only evaluate what is in your repository, so ensure it contains evidence of achievement in the criteria below.  
+The overall impression formed by the examiners may influence marks in each category.  
 
-Remember, we can only evaluate what is in your repository.  
-It should contain evidence of achievement of the criteria below.  
-The examiners' overall impression may affect marks in each category.  
+### Presentation  
 
-### Presentation
+- Your repository should be well-organized, with a clear and logical structure.  
+- Your README should clearly explain the purpose of your repository and how to run any code it contains.
+- Your notebook should present a clear narrative, making it easy to follow your thought process.  
+- A knowledgeable expert reviewing your repository should be able to understand its contents without your help.  
 
-- Well-organized and clean repository structure.  
-- Clear narrative in notebooks.  
-- Repository contents and purpose are easy to understand.  
+### Research  
 
-### Research
+- Your submission should demonstrate research on relevant topics, showing an understanding of computational theory.  
+- You should build upon existing literature and documentation rather than just presenting basic solutions.  
+- References and comparisons to similar work should be included.  
+- References should be put into context - how and why they are relevant to your submission.  
 
-- Evidence of research on relevant topics.
-- Building upon the literature and documentation.
-- Appropriate referencing and comparisons to similar work.
+### Documentation  
 
-### Documentation
+- Your repository should contain standard files, such as a README, to provide context for your work.  
+- All concepts should be clearly and concisely explained within your notebooks.  
+- Code should include informative comments that clarify its purpose and functionality.  
+- Your notebook should include an introduction providing context and a conclusion to summarize any results.  
 
-- Clear and concise explanations of concepts.  
-- Informative comments in code.  
-- Inclusion of standard repository files.  
+### Development  
 
-### Development
+- Your code should be correct, efficient, and well-structured.  
+- Standard programming structures, algorithms, and testing methods should be applied where appropriate.  
+- The overall architecture of your code should be clean, demonstrating good software development practices.  
+- Your code should demonstrate your knowledge of established style conventions and norms.  
 
-- Correct, efficient, and clean code.  
-- Use of standard programming structures, algorithms, and tests.  
-- Clean architecture.
+### Consistency  
 
-### Consistency
-
-- A detailed commit history with many incremental changes.  
-- Steady work on tasks throughout the semester.  
-- Evidence of review and refinement in the repository.  
+- Your commit history should show detailed, incremental changes over time.  
+- There should be evidence of steady progress on tasks throughout the semester, rather than last-minute submissions.  
+- Your repository should reflect a process of review and refinement, demonstrating continuous improvement.  
+- Your commit history should demonstrate your refinement of both code and explanations over time.  
