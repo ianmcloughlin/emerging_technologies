@@ -8,4 +8,11 @@ dependencies = [
     "matplotlib>=3.10.1",
     "numpy>=2.2.3",
     "qiskit[visualization]>=1.4.1",
+    "sympy>=1.13.3",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+    "ruff>=0.9.10",
 ]
