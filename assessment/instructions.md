@@ -1,59 +1,49 @@
 # Assessment
 
-These are the assessment instructions for Emerging Technologies in 2025/2026.  
-You will complete tasks in a Jupyter notebook and submit it as part of a GitHub repository.  
-
-The assessment allows you to demonstrate your achievement of the module learning outcomes.  
-Start early and work consistently.  
-If you have questions, ask them well before the deadline.  
+These are the assessment instructions for Emerging Technologies in 2025/2026.
+You will complete tasks in a Jupyter notebook and submit it as part of a GitHub repository.
+The assessment allows you to demonstrate your achievement of the module learning outcomes.
+It is recommended to start early and work consistently.
+If you have any questions, please ask them well before the deadline.  
 
 ## Submit
 
-**[Click here to submit your repository URL](https://forms.office.com/e/qbmHfqBTci)**  
+**[Click here to submit your repository URL (ATU Login required)](https://forms.office.com/)**
 
-Repository URL Submission Deadline: **Sunday, 12 October 2025**.  
-Final Deadline for all Assessment Elements: **Sunday, 21 December 2025**.  
-
-Your last commit made **on or before the final deadline** will be graded.  
+Please submit your repository on or before **Sunday, 12 October 2025**.  
+The final deadline for all assessment elements is **Sunday, 21 December 2025**.  
+The last commit made **on or before** the deadline will be graded.  
 
 ## Target Audience
 
-When crafting your submission, you should imagine you are working at a tech company.  
-Your team leader has asked you to analyze a series of topics and give a presentation on them.  
-They have stated that you should be able to hand your work over to a team mate at any stage.  
-Thus, you must include any necessary details for your colleagues to create the necessary development environment.  
-They should not need to ask for your help to do this.  
+When crafting your submission, imagine you are working at a tech company.
+Your team leader has asked you to analyze a series of related topics and present your findings.
+They expect any of your teammates would be able to take over your work at any stage without needing your help.
+So, include all necessary details and configuration files to create the required development environment.
+
+Your work should then be easy to showcase during a technical interview.
+An interviewer should be able to understand your work without any assistance.
+This will be a determining factor in assigning your mark.
 
 ## Feedback
 
-You are expected to work on your submission throughout the semester.  
-Guidance on your expected progress will be provided in lectures.  
-
-Submitted repositories will be reviewed during the semester.  
-Personalized feedback will be given mid-semester.  
-You must have submitted your repository URL to receive this feedback.  
-Make sure to regularly push your work to GitHub.  
+You are expected to work on your submission throughout the semester.
+Feedback on submitted repositories will be given mid-semester.
+To receive this feedback, ensure you have submitted your repository URL.
+Regularly push your work to GitHub.
 
 ## Repository
 
-Start by completing the steps in [repo.md](repo.md).  
-Ensure your final submission is in the `main` branch.  
+Start by completing the steps in [repo.md](repo.md).
+Ensure your final submission is in the `main` branch.
+Your repository should contain only assessment-related files.
+You should work on your repository weekly throughout the semester.
+By the end, your commit history should be extensive.
 
-Your repository should contain only assessment-related files.  
-You should work on your repository weekly throughout the semester.  
-By the end, your commit history should be extensive.  
-
-If you encounter issues with git, seek help well before the deadline.  
-Do not delete any files or commits without first consulting the lecturer.  
-
-Very large commits, especially late in the semester, will not be accepted.  
-At any stage you may be asked to discuss your repository.  
-
-### Organize Your Repository
-
-Your work should be easy to showcase during a technical interview.  
-An interviewer should be able to understand your work without any assistance.  
-This will be a determining factor in assigning your mark.  
+If you encounter issues with git, seek help well before the deadline.
+Do not delete any files or commits without first consulting the lecturer.
+Very large commits, especially late in the semester, will not be accepted.
+At any stage you may be asked to discuss your repository.
 
 Make sure your repository is well-structured and includes:
 
@@ -65,39 +55,37 @@ Make sure your repository is well-structured and includes:
 
 ## Tasks
 
-Complete all tasks outlined in **[tasks.md](tasks.md)**.  
-All solutions must be in a notebook named `tasks.ipynb` in the root of your repository.  
-Use Markdown headings to clearly identify each task within the notebook.  
+Complete all tasks outlined in **[tasks.md](tasks.md)**.
+All solutions must be in a notebook named `tasks.ipynb` in the root of your repository.
+Use Markdown headings to clearly identify each task within the notebook.
 
-### Packages and Libraries
+## Packages and Libraries
 
 As usual, you can use [modules in the standard library](https://en.wikipedia.org/wiki/Standard_library).  
-You may also use any of the following libraries, including any of their dependencies:  
-`qiskit`, `numpy`, `scipy`, `matplotlib`, `seaborn`, `pandas`, `statsmodels`, `scikit-learn`.  
-Ask before using anything else.  
+You may also use any of the packages in the [requirements.txt file in this repository](../requirements.txt) and their dependencies.
+Please ask before using anything else.
 
-### Writing Your Notebook
+## Writing Your Notebook
 
-Break up your code into smaller, manageable cells whenever possible.  
-Each code cell should focus on a single step in your overall solution.  
-Use Markdown cells to give explanations and insights into your code.  
+Break up your code into smaller, manageable cells whenever possible.
+Each code cell should focus on a single step in your overall solution.
+Use Markdown cells to give explanations and insights into your code.
+Include comments in all code cells to tell the reader what each statement does.
+Write clean, readable, and efficient code using meaningful variable names and consistent formatting.
+Follow Python coding standards and guidelines such as [PEP8](https://peps.python.org/pep-0008/).
 
-Include comments in all code cells to tell the reader what each statement does.  
-Write clean, readable, and efficient code.  
-Use meaningful variable names and consistent formatting.  
-You should follow Python coding standards and guidelines such as [PEP8](https://peps.python.org/pep-0008/).  
+## Commit History
 
-### Commits
-
-Make regular commits to your repository.  
-Your commit history should demonstrate how your solution to each task evolved.  
-There should be evidence of incremental improvements, clarifications, and revisions.  
+Make regular commits to your repository.
+Your commit history should demonstrate how your solution to each task evolved.
+There should be evidence of incremental improvements, clarifications, and revisions.
 
 ## Marking Scheme  
 
-Your submission will be graded based on five categories, each carrying equal weight.  
-We can only evaluate what is in your repository, so ensure it contains evidence of achievement in the criteria below.  
-The overall impression formed by the examiners may influence marks in each category.  
+Your submission will be graded based on five equally weighted categories.
+We can only consider what is in your repository, so ensure it contains evidence of achievement in the criteria below.
+The overall impression formed by the examiners may influence marks in each category.
+Remember to keep the target audience in mind throughout.
 
 ### Presentation  
 
