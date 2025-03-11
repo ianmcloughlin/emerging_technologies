@@ -35,4 +35,4 @@ If you don’t already have a GitHub account, go to [GitHub](https://github.com)
    It should look like this:  
    `https://github.com/username/reponame`.
 
-2. Paste this URL into the submission form linked in the [assessment instructions](instructions.md#Submit).
+2. Paste this URL into the submission form linked in the [assessment instructions](instructions.md#submit).
