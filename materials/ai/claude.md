@@ -1031,3 +1031,423 @@ SymPy provides symbolic computation for quantum systems:
 - **Use SymPy when**: You need exact symbolic expressions, are deriving theoretical results, or teaching quantum concepts with precise mathematical notation
 
 For serious quantum computing applications, you might consider specialized libraries like Qiskit, Cirq, or QuTiP, which are built specifically for quantum simulation and offer more comprehensive tools.
+
+
+
+
+
+
+import numpy as np
+
+def is_valid_qubit(state_vector):
+    """
+    Check if a complex vector represents a valid qubit state.
+    A valid qubit must be normalized (i.e., |alpha|^2 + |beta|^2 = 1).
+    
+    Args:
+        state_vector: A numpy array representing a qubit state [alpha, beta]
+    
+    Returns:
+        bool: True if the state is a valid qubit, False otherwise
+    """
+    # Check if the vector has exactly two elements
+    if len(state_vector) != 2:
+        return False
+    
+    # Calculate the sum of squared magnitudes
+    probability_sum = np.sum(np.abs(state_vector) ** 2)
+    
+    # Check if the sum is approximately 1 (allowing for floating-point errors)
+    return np.isclose(probability_sum, 1.0)
+
+def tensor_product(qubit_list):
+    """
+    Calculate the tensor product of multiple qubits.
+    
+    Args:
+        qubit_list: A list of numpy arrays, each representing a qubit state
+    
+    Returns:
+        numpy.ndarray: The tensor product of all qubits
+    """
+    # Start with the first qubit
+    result = qubit_list[0]
+    
+    # Compute tensor product with remaining qubits
+    for qubit in qubit_list[1:]:
+        result = np.kron(result, qubit)
+    
+    return result
+
+def is_unitary(matrix):
+    """
+    Check if a matrix is unitary.
+    A unitary matrix U satisfies U† U = U U† = I, where U† is the conjugate transpose.
+    
+    Args:
+        matrix: A numpy array representing a square matrix
+    
+    Returns:
+        bool: True if the matrix is unitary, False otherwise
+    """
+    # Check if the matrix is square
+    if matrix.shape[0] != matrix.shape[1]:
+        return False
+    
+    # Calculate U† U
+    conjugate_transpose = matrix.conj().T
+    product = np.dot(conjugate_transpose, matrix)
+    
+    # Check if U† U = I
+    identity = np.eye(matrix.shape[0])
+    return np.allclose(product, identity)
+
+def apply_gate(gate, state):
+    """
+    Apply a quantum gate (unitary matrix) to a quantum state.
+    
+    Args:
+        gate: A numpy array representing a unitary matrix
+        state: A numpy array representing a quantum state
+    
+    Returns:
+        numpy.ndarray: The resulting quantum state after applying the gate
+    """
+    # Check if the gate is unitary
+    if not is_unitary(gate):
+        raise ValueError("The gate must be a unitary matrix")
+    
+    # Check if dimensions match
+    if gate.shape[1] != len(state):
+        raise ValueError("Gate and state dimensions do not match")
+    
+    # Apply the gate to the state
+    return np.dot(gate, state)
+
+# Example usage
+if __name__ == "__main__":
+    # Define some common qubit states
+    qubit_0 = np.array([1, 0], dtype=complex)  # |0⟩
+    qubit_1 = np.array([0, 1], dtype=complex)  # |1⟩
+    qubit_plus = np.array([1/np.sqrt(2), 1/np.sqrt(2)], dtype=complex)  # |+⟩
+    qubit_minus = np.array([1/np.sqrt(2), -1/np.sqrt(2)], dtype=complex)  # |-⟩
+    
+    # Complex qubit states
+    complex_qubit = np.array([1/np.sqrt(2), 1j/np.sqrt(2)], dtype=complex)
+    
+    # Define invalid qubit states
+    invalid_qubit = np.array([1, 1], dtype=complex)  # Not normalized
+    
+    print("===== Qubit Validation =====")
+    print(f"Is |0⟩ a valid qubit? {is_valid_qubit(qubit_0)}")
+    print(f"Is |1⟩ a valid qubit? {is_valid_qubit(qubit_1)}")
+    print(f"Is |+⟩ a valid qubit? {is_valid_qubit(qubit_plus)}")
+    print(f"Is |-⟩ a valid qubit? {is_valid_qubit(qubit_minus)}")
+    print(f"Is (1/√2)|0⟩ + (i/√2)|1⟩ a valid qubit? {is_valid_qubit(complex_qubit)}")
+    print(f"Is [1, 1] a valid qubit? {is_valid_qubit(invalid_qubit)}")
+    
+    print("\n===== Tensor Product =====")
+    # Calculate tensor product of |0⟩ and |1⟩ to get |01⟩
+    tensor_01 = tensor_product([qubit_0, qubit_1])
+    print(f"Tensor product |0⟩ ⊗ |1⟩ = {tensor_01}")
+    
+    # Calculate tensor product of |+⟩ and |-⟩
+    tensor_plus_minus = tensor_product([qubit_plus, qubit_minus])
+    print(f"Tensor product |+⟩ ⊗ |-⟩ = {tensor_plus_minus}")
+    
+    # Calculate tensor product of three qubits
+    tensor_three = tensor_product([qubit_0, qubit_plus, qubit_1])
+    print(f"Tensor product |0⟩ ⊗ |+⟩ ⊗ |1⟩ = {tensor_three}")
+    
+    print("\n===== Unitary Matrices =====")
+    # Define some common quantum gates
+    I = np.array([[1, 0], [0, 1]], dtype=complex)  # Identity gate
+    X = np.array([[0, 1], [1, 0]], dtype=complex)  # Pauli-X (NOT) gate
+    H = np.array([[1, 1], [1, -1]], dtype=complex) / np.sqrt(2)  # Hadamard gate
+    
+    # Non-unitary matrix
+    non_unitary = np.array([[1, 1], [1, 1]], dtype=complex)
+    
+    print(f"Is I unitary? {is_unitary(I)}")
+    print(f"Is X unitary? {is_unitary(X)}")
+    print(f"Is H unitary? {is_unitary(H)}")
+    print(f"Is [[1, 1], [1, 1]] unitary? {is_unitary(non_unitary)}")
+    
+    print("\n===== Applying Quantum Gates =====")
+    # Apply X gate to |0⟩ (should give |1⟩)
+    x_applied = apply_gate(X, qubit_0)
+    print(f"X|0⟩ = {x_applied}")
+    print(f"Is X|0⟩ equal to |1⟩? {np.allclose(x_applied, qubit_1)}")
+    
+    # Apply H gate to |0⟩ (should give |+⟩)
+    h_applied = apply_gate(H, qubit_0)
+    print(f"H|0⟩ = {h_applied}")
+    print(f"Is H|0⟩ equal to |+⟩? {np.allclose(h_applied, qubit_plus)}")
+    
+    # Apply H gate to |1⟩ (should give |-⟩)
+    h_applied_1 = apply_gate(H, qubit_1)
+    print(f"H|1⟩ = {h_applied_1}")
+    print(f"Is H|1⟩ equal to |-⟩? {np.allclose(h_applied_1, qubit_minus)}")
+    
+    # Apply gates to multi-qubit systems
+    print("\n===== Multi-Qubit Operations =====")
+    # Create a 2-qubit system |00⟩
+    two_qubit_system = tensor_product([qubit_0, qubit_0])
+    print(f"Initial state |00⟩ = {two_qubit_system}")
+    
+    # Define a CNOT gate
+    CNOT = np.array([
+        [1, 0, 0, 0],
+        [0, 1, 0, 0],
+        [0, 0, 0, 1],
+        [0, 0, 1, 0]
+    ], dtype=complex)
+    
+    # Apply CNOT to |00⟩
+    cnot_applied = apply_gate(CNOT, two_qubit_system)
+    print(f"CNOT|00⟩ = {cnot_applied}")
+    
+    # Apply CNOT to |10⟩
+    state_10 = tensor_product([qubit_1, qubit_0])
+    cnot_applied_10 = apply_gate(CNOT, state_10)
+    print(f"CNOT|10⟩ = {cnot_applied_10}")
+    
+    # Verify that CNOT|10⟩ = |11⟩
+    state_11 = tensor_product([qubit_1, qubit_1])
+    print(f"Is CNOT|10⟩ equal to |11⟩? {np.allclose(cnot_applied_10, state_11)}")
+
+
+
+
+
+
+import sympy as sp
+from sympy import Matrix, I, symbols, conjugate, sqrt, simplify
+
+def is_valid_qubit(state_vector):
+    """
+    Check if a complex vector represents a valid qubit state.
+    A valid qubit must be normalized (i.e., |alpha|^2 + |beta|^2 = 1).
+    
+    Args:
+        state_vector: A SymPy Matrix representing a qubit state [alpha, beta]
+    
+    Returns:
+        bool: True if the state is a valid qubit, False otherwise
+    """
+    # Check if the vector has exactly two elements
+    if state_vector.shape != (2, 1):
+        return False
+    
+    # Calculate the sum of squared magnitudes
+    probability_sum = 0
+    for element in state_vector:
+        probability_sum += (element * conjugate(element))
+    
+    # Simplify the expression
+    probability_sum = simplify(probability_sum)
+    
+    # For symbolic expressions, we can only check if the simplified expression equals 1
+    if probability_sum.is_number:
+        return sp.Abs(probability_sum - 1) < 1e-10
+    else:
+        return probability_sum == 1
+
+def tensor_product(qubit_list):
+    """
+    Calculate the tensor product of multiple qubits.
+    
+    Args:
+        qubit_list: A list of SymPy Matrices, each representing a qubit state
+    
+    Returns:
+        sympy.Matrix: The tensor product of all qubits
+    """
+    # Start with the first qubit
+    result = qubit_list[0]
+    
+    # Compute tensor product with remaining qubits
+    for qubit in qubit_list[1:]:
+        result = sp.tensorproduct(result, qubit)
+    
+    return result
+
+def is_unitary(matrix):
+    """
+    Check if a matrix is unitary.
+    A unitary matrix U satisfies U† U = U U† = I, where U† is the conjugate transpose.
+    
+    Args:
+        matrix: A SymPy Matrix
+    
+    Returns:
+        bool: True if the matrix is unitary, False otherwise
+    """
+    # Check if the matrix is square
+    if matrix.shape[0] != matrix.shape[1]:
+        return False
+    
+    # Calculate conjugate transpose (dagger)
+    dagger = matrix.H
+    
+    # Check if U† U = I
+    product = dagger * matrix
+    identity = sp.eye(matrix.shape[0])
+    
+    # Simplify the product
+    product = simplify(product)
+    
+    # Check if product equals identity
+    return product == identity
+
+def apply_gate(gate, state):
+    """
+    Apply a quantum gate (unitary matrix) to a quantum state.
+    
+    Args:
+        gate: A SymPy Matrix representing a unitary matrix
+        state: A SymPy Matrix representing a quantum state
+    
+    Returns:
+        sympy.Matrix: The resulting quantum state after applying the gate
+    """
+    # Check if dimensions match
+    if gate.shape[1] != state.shape[0]:
+        raise ValueError("Gate and state dimensions do not match")
+    
+    # Apply the gate to the state
+    result = gate * state
+    
+    # Simplify the result
+    return simplify(result)
+
+# Example usage
+if __name__ == "__main__":
+    # Define some common qubit states
+    qubit_0 = Matrix([1, 0])  # |0⟩
+    qubit_1 = Matrix([0, 1])  # |1⟩
+    qubit_plus = Matrix([1/sqrt(2), 1/sqrt(2)])  # |+⟩
+    qubit_minus = Matrix([1/sqrt(2), -1/sqrt(2)])  # |-⟩
+    
+    # Complex qubit state
+    qubit_complex = Matrix([1/sqrt(2), I/sqrt(2)])  # (1/√2)|0⟩ + (i/√2)|1⟩
+    
+    # Invalid qubit state
+    invalid_qubit = Matrix([1, 1])  # Not normalized
+    
+    print("===== Qubit Validation =====")
+    print(f"Is |0⟩ a valid qubit? {is_valid_qubit(qubit_0)}")
+    print(f"Is |1⟩ a valid qubit? {is_valid_qubit(qubit_1)}")
+    print(f"Is |+⟩ a valid qubit? {is_valid_qubit(qubit_plus)}")
+    print(f"Is |-⟩ a valid qubit? {is_valid_qubit(qubit_minus)}")
+    print(f"Is (1/√2)|0⟩ + (i/√2)|1⟩ a valid qubit? {is_valid_qubit(qubit_complex)}")
+    print(f"Is [1, 1] a valid qubit? {is_valid_qubit(invalid_qubit)}")
+    
+    # Demonstrate symbolic capabilities
+    print("\n===== Symbolic Qubit States =====")
+    alpha, beta = symbols('alpha beta', complex=True)
+    symbolic_qubit = Matrix([alpha, beta])
+    print(f"Symbolic qubit: {symbolic_qubit}")
+    
+    # Define constraint that |alpha|^2 + |beta|^2 = 1
+    constraint = alpha * conjugate(alpha) + beta * conjugate(beta)
+    print(f"Normalization constraint: {constraint} = 1")
+    
+    print("\n===== Tensor Product =====")
+    # Calculate tensor product of |0⟩ and |1⟩ to get |01⟩
+    tensor_01 = tensor_product([qubit_0, qubit_1])
+    print(f"Tensor product |0⟩ ⊗ |1⟩ = {tensor_01}")
+    
+    # Calculate tensor product of |+⟩ and |-⟩
+    tensor_plus_minus = tensor_product([qubit_plus, qubit_minus])
+    print(f"Tensor product |+⟩ ⊗ |-⟩ = {tensor_plus_minus}")
+    
+    # Calculate tensor product of three qubits
+    tensor_three = tensor_product([qubit_0, qubit_plus, qubit_1])
+    print(f"Tensor product |0⟩ ⊗ |+⟩ ⊗ |1⟩ = {tensor_three}")
+    
+    print("\n===== Unitary Matrices =====")
+    # Define some common quantum gates
+    I_gate = Matrix([[1, 0], [0, 1]])  # Identity gate
+    X_gate = Matrix([[0, 1], [1, 0]])  # Pauli-X (NOT) gate
+    H_gate = Matrix([[1, 1], [1, -1]]) / sqrt(2)  # Hadamard gate
+    
+    # Define a non-unitary matrix
+    non_unitary = Matrix([[1, 1], [1, 1]])
+    
+    print(f"Is I unitary? {is_unitary(I_gate)}")
+    print(f"Is X unitary? {is_unitary(X_gate)}")
+    print(f"Is H unitary? {is_unitary(H_gate)}")
+    print(f"Is [[1, 1], [1, 1]] unitary? {is_unitary(non_unitary)}")
+    
+    # Define Z and Y gates
+    Z_gate = Matrix([[1, 0], [0, -1]])  # Pauli-Z gate
+    Y_gate = Matrix([[0, -I], [I, 0]])  # Pauli-Y gate
+    
+    print(f"Is Z unitary? {is_unitary(Z_gate)}")
+    print(f"Is Y unitary? {is_unitary(Y_gate)}")
+    
+    print("\n===== Applying Quantum Gates =====")
+    # Apply X gate to |0⟩ (should give |1⟩)
+    x_applied = apply_gate(X_gate, qubit_0)
+    print(f"X|0⟩ = {x_applied}")
+    print(f"Is X|0⟩ equal to |1⟩? {x_applied == qubit_1}")
+    
+    # Apply H gate to |0⟩ (should give |+⟩)
+    h_applied = apply_gate(H_gate, qubit_0)
+    print(f"H|0⟩ = {h_applied}")
+    print(f"Is H|0⟩ equal to |+⟩? {h_applied == qubit_plus}")
+    
+    # Apply H gate to |1⟩ (should give |-⟩)
+    h_applied_1 = apply_gate(H_gate, qubit_1)
+    print(f"H|1⟩ = {h_applied_1}")
+    print(f"Is H|1⟩ equal to |-⟩? {h_applied_1 == qubit_minus}")
+    
+    # Apply gates to multi-qubit systems
+    print("\n===== Multi-Qubit Operations =====")
+    # Create a 2-qubit system |00⟩
+    two_qubit_system = tensor_product([qubit_0, qubit_0])
+    print(f"Initial state |00⟩ = {two_qubit_system}")
+    
+    # Define a CNOT gate
+    CNOT = Matrix([
+        [1, 0, 0, 0],
+        [0, 1, 0, 0],
+        [0, 0, 0, 1],
+        [0, 0, 1, 0]
+    ])
+    
+    # Apply CNOT to |00⟩
+    cnot_applied = apply_gate(CNOT, two_qubit_system)
+    print(f"CNOT|00⟩ = {cnot_applied}")
+    
+    # Apply CNOT to |10⟩
+    state_10 = tensor_product([qubit_1, qubit_0])
+    cnot_applied_10 = apply_gate(CNOT, state_10)
+    print(f"CNOT|10⟩ = {cnot_applied_10}")
+    
+    # Verify that CNOT|10⟩ = |11⟩
+    state_11 = tensor_product([qubit_1, qubit_1])
+    print(f"Is CNOT|10⟩ equal to |11⟩? {cnot_applied_10 == state_11}")
+    
+    # Demonstrate symbolic computation
+    print("\n===== Symbolic Computation =====")
+    # Create a symbolic phase gate
+    theta = symbols('theta', real=True)
+    phase_gate = Matrix([
+        [1, 0],
+        [0, sp.exp(I*theta)]
+    ])
+    
+    print(f"Symbolic phase gate:\n{phase_gate}")
+    
+    # Check if it's unitary (should be True for any theta)
+    print(f"Is phase gate unitary? {is_unitary(phase_gate)}")
+    
+    # Apply to |+⟩ state
+    phase_applied = apply_gate(phase_gate, qubit_plus)
+    print(f"Phase(theta)|+⟩ = {phase_applied}")
+    
+    # Substitute a specific value for theta (e.g., π/2)
+    phase_applied_pi_2 = phase_applied.subs(theta, sp.pi/2)
+    print(f"Phase(π/2)|+⟩ = {phase_applied_pi_2}")
