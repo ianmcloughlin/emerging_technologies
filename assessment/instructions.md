@@ -6,14 +6,11 @@ The assessment allows you to demonstrate your achievement of the module learning
 It is recommended to start early and work consistently.
 If you have any questions, please ask them well before the deadline.  
 
-## Submit
-
 **[Click here to submit your repository URL (ATU Login required)](https://forms.office.com/)**
 
-Please submit your repository on or before **Sunday, 12 October 2025**.  
-The final deadline for all assessment elements is **Sunday, 21 December 2025**.  
+Submit your repository on or before **Sunday, 12 October 2025**.  
+The final deadline for all your work is **Sunday, 21 December 2025**.  
 The last commit made **on or before** the deadline will be graded.  
-
 
 ## Target Audience
 
