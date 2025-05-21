@@ -14,16 +14,11 @@ Please submit your repository on or before **Sunday, 12 October 2025**.
 The final deadline for all assessment elements is **Sunday, 21 December 2025**.  
 The last commit made **on or before** the deadline will be graded.  
 
+
 ## Target Audience
 
-When crafting your submission, imagine you are working at a tech company.
-Your team leader has asked you to analyze a series of related topics and present your findings.
-They expect any of your teammates would be able to take over your work at any stage without needing your help.
-So, include all necessary details and configuration files to create the required development environment.
+Create your submission with the following target audience in mind: an informed professional, such as a prospective interviewer, with a strong background in computing but not necessarily familiar with the specific language, tools, or terminology you use.
 
-Your work should then be easy to showcase during a technical interview.
-An interviewer should be able to understand your work without any assistance.
-This will be a determining factor in assigning your mark.
 
 ## Feedback
 
@@ -31,6 +26,7 @@ You are expected to work on your submission throughout the semester.
 Feedback on submitted repositories will be given mid-semester.
 To receive this feedback, ensure you have submitted your repository URL.
 Regularly push your work to GitHub.
+
 
 ## Repository
 
@@ -53,17 +49,20 @@ Make sure your repository is well-structured and includes:
 - Lowercase file and folder names, except for files like `README.md`.
 - No spaces or special characters in filenames. Underscores, hyphens, and full stops are okay.
 
+
 ## Tasks
 
 Complete all tasks outlined in **[tasks.md](tasks.md)**.
 All solutions must be in a notebook named `tasks.ipynb` in the root of your repository.
 Use Markdown headings to clearly identify each task within the notebook.
 
+
 ## Packages and Libraries
 
 As usual, you can use [modules in the standard library](https://en.wikipedia.org/wiki/Standard_library).  
 You may also use any of the packages in the [requirements.txt file in this repository](../requirements.txt) and their dependencies.
 Please ask before using anything else.
+
 
 ## Writing Your Notebook
 
@@ -74,32 +73,37 @@ Include comments in all code cells to tell the reader what each statement does.
 Write clean, readable, and efficient code using meaningful variable names and consistent formatting.
 Follow Python coding standards and guidelines such as [PEP8](https://peps.python.org/pep-0008/).
 
+
 ## Commit History
 
 Make regular commits to your repository.
 Your commit history should demonstrate how your solution to each task evolved.
 There should be evidence of incremental improvements, clarifications, and revisions.
 
+
 ## Marking Scheme  
 
-Your submission will be graded based on five equally weighted categories.
-We can only consider what is in your repository, so ensure it contains evidence of achievement in the criteria below.
-The overall impression formed by the examiners may influence marks in each category.
-Remember to keep the target audience in mind throughout.
+Your submission will be assessed across the following five equally-weighted categories.
+Your mark will be based only on the contents of your repository - make sure it provides clear evidence of the criteria listed.
+The overall impression your submission creates may influence marks in each category.
+Remember to keep the target audience in mind when crafting your submission.
+
 
 ### Presentation  
 
-- Your repository should be well-organized, with a clear and logical structure.  
+- Your repository should be well-organized, with a clear, and logical structure.  
 - Your README should clearly explain the purpose of your repository and how to run any code it contains.
 - Your notebook should present a clear narrative, making it easy to follow your thought process.  
 - A knowledgeable expert reviewing your repository should be able to understand its contents without your help.  
 
+
 ### Research  
 
-- Your submission should demonstrate research on relevant topics, showing an understanding of computational theory.  
+- Your submission should demonstrate research on relevant topics, showing an understanding of the material.  
 - You should build upon existing literature and documentation rather than just presenting basic solutions.  
 - References and comparisons to similar work should be included.  
 - References should be put into context - how and why they are relevant to your submission.  
+
 
 ### Documentation  
 
@@ -108,16 +112,18 @@ Remember to keep the target audience in mind throughout.
 - Code should include informative comments that clarify its purpose and functionality.  
 - Your notebook should include an introduction providing context and a conclusion to summarize any results.  
 
+
 ### Development  
 
-- Your code should be correct, efficient, and well-structured.  
+- Your code should be efficient and well-structured, effectively addressing the problem at hand.  
 - Standard programming structures, algorithms, and testing methods should be applied where appropriate.  
-- The overall architecture of your code should be clean, demonstrating good software development practices.  
+- The overall architecture of your code should be clean, demonstrating good coding practices.  
 - Your code should demonstrate your knowledge of established style conventions and norms.  
+
 
 ### Consistency  
 
 - Your commit history should show detailed, incremental changes over time.  
 - There should be evidence of steady progress on tasks throughout the semester, rather than last-minute submissions.  
 - Your repository should reflect a process of review and refinement, demonstrating continuous improvement.  
-- Your commit history should demonstrate your refinement of both code and explanations over time.  
+- Your commit history should demonstrate your refinement of both code and explanations over time.   
