@@ -3,7 +3,7 @@
 Emerging Technologies runs from September to December 2025 at [ATU](https://www.atu.ie).
 
 ![Logicians](images/emerging_technologies.png)  
-Portraits by [mattleadbeater](https://www.instagram.com/mattleadbeater/).
+<small>Portraits by [mattleadbeater](https://www.instagram.com/mattleadbeater/).</small>
 
 ## Purpose
 
