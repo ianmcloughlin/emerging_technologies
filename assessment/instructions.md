@@ -1,7 +1,7 @@
 
 # Emerging Technologies
 
-## Assessment: Autumn 24/25
+## Assessment Brief: Autumn 24/25
 
 You will complete a set of tasks in a Jupyter notebook and submit your work in a GitHub repository.
 This is your chance to show how well you have achieved the module learning outcomes.
