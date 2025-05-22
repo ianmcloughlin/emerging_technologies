@@ -1,5 +1,5 @@
 
-# Emerging Technologies 24/25 Autumn
+# Emerging Technologies Autumn 24/25
 
 
 
