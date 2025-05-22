@@ -14,12 +14,12 @@ If you have any questions, ask well before the deadline.
 Create a GitHub repository solely for this assessment and complete all tasks in a Jupyter notebook named `tasks.ipynb`.
 If you make your repository private, add `ianmcloughlin` as a collaborator. Then use the following form to submit your GitHub repository URL by **Sunday, 12 October 2025**:
 
-> **[Click here to submit your repository URL (ATU Login required)](https://forms.office.com/)**
+**[Click here to submit your repository URL (ATU Login required)](https://forms.office.com/)**  
 
 Work on your repository, making regular commits and pushing them to GitHub.
 The final deadline for all work is:
 
-> **Final Deadline: Sunday, 21 December 2025**.
+**Final Deadline: Sunday, 21 December 2025**  
 
 Only the last commit made **on or before** this date will be graded.
 Make sure your final version is pushed to GitHub on or before that date.
