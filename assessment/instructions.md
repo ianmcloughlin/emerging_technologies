@@ -1,4 +1,10 @@
-# Assessment
+
+# Emerging Technologies 24/25 Autumn
+
+
+
+
+
 
 These are the assessment instructions for Emerging Technologies in 2025/2026.
 You will complete tasks in a Jupyter notebook and submit it as part of a GitHub repository.
