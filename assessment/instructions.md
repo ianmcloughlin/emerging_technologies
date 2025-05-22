@@ -1,24 +1,29 @@
 
-# Assessment: Emerging Technologies Autumn 24/25
+# Emerging Technologies
 
+## Assessment: Autumn 24/25
 
-# Assessment
+You will complete a set of tasks in a Jupyter notebook and submit your work in a GitHub repository.
+This is your chance to show how well you have achieved the module learning outcomes.
+Begin your submission as soon as possible and make steady progress each week.
+Last-minute work rarely leads to good results.
+If you have any questions, ask well before the deadline.
 
-## Emerging Technologies Autumn 24/25
+## Submission
 
+Create a GitHub repository solely for this assessment and complete all tasks in a Jupyter notebook named `tasks.ipynb`.
+If you make your repository private, add `ianmcloughlin` as a collaborator. Then use the following form to submit your GitHub repository URL by **Sunday, 12 October 2025**:
 
+> **[Click here to submit your repository URL (ATU Login required)](https://forms.office.com/)**
 
-These are the assessment instructions for Emerging Technologies in 2025/2026.
-You will complete tasks in a Jupyter notebook and submit it as part of a GitHub repository.
-The assessment allows you to demonstrate your achievement of the module learning outcomes.
-It is recommended to start early and work consistently.
-If you have any questions, please ask them well before the deadline.  
+Work on your repository, making regular commits and pushing them to GitHub.
+The final deadline for all work is:
 
-**[Click here to submit your repository URL (ATU Login required)](https://forms.office.com/)**
+> **Final Deadline: Sunday, 21 December 2025**.
 
-Submit your repository on or before **Sunday, 12 October 2025**.  
-The final deadline for all your work is **Sunday, 21 December 2025**.  
-The last commit made **on or before** the deadline will be graded.  
+Only the last commit made **on or before** this date will be graded.
+Make sure your final version is pushed to GitHub on or before that date.
+
 
 ## Target Audience
 
