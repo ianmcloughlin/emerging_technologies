@@ -1,3 +1,8 @@
 numpy
 matplotlib
+pandas
+seaborn
+sympy
+scipy
+scikit-learn
 qiskit[visualization]

@@ -1,76 +1,83 @@
 
-# Emerging Technologies
+# Assessment Instructions: Autumn 24/25
 
-## Assessment Brief: Autumn 24/25
+**Emerging Technologies**
 
-In this assessment, you will complete tasks in a Jupyter notebook, submitting your work in a GitHub repository.
-This is your chance to show how well you have achieved the module learning outcomes.
-Begin your submission as soon as possible and make steady progress each week.
-Please consult the [assessment-advice.ipynb](assessment-advice.ipynb) document for advice on completing this assessment.
-If you have any other questions, ask well before the deadline.
+This assessment is an opportunity to demonstrate that you have achieved the learning outcomes for this module.
+You will complete tasks in a single Jupyter notebook, submitted in a GitHub repository created solely for this assessment.
+Start early and make consistent progress each week.
+Refer to the [FAQ](faq.ipynb) for further guidance.
+If you have questions, ask them well before the deadline.
 
 ## Submission
 
-Create a new GitHub repository solely for this assessment. Submit the repository URL by **Sunday, 12 October 2025**:
+**Final Deadline: Sunday, 21 December 2025**  
 
 **[Click here to submit your repository URL (ATU Login required)](https://forms.office.com/)**  
 
+Create a new GitHub repository and submit its URL using the form above on or before **Sunday, 12 October 2025**.
 Work on your repository as detailed below, making regular commits and pushing them to GitHub.
-The last commit pushed to GitHub **on or before** the below deadline will be graded.
-
-**Final Deadline: Sunday, 21 December 2025**  
+The last commit pushed to GitHub *on or before* the final deadline above will be assessed.
 
 ## Repository
 
-Ensure your final submission is in the `main` branch of your repository.
-Include a clear [`README.md`](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes) and a relevant [`.gitignore` file](https://github.com/github/gitignore).
-Do not include [unnecessary files or folders](https://realpython.com/python-git-github-intro/#what-not-to-add-to-a-git-repo).
-Use lowercase file and folder names, except for files like `README.md`. No spaces or special characters in filenames. Underscores, hyphens, and full stops are okay.
-
-## Target Audience
-
-Create your submission with the following target audience in mind: an informed professional, such as a prospective interviewer, with a strong background in computing but not necessarily familiar with the specific language, tools, or terminology you use.
-A member of your target audience should be able to clone your repository and run any code within it with minimal effort. You should tell them how to set up the necessary development environment in your README. Include any necessary data files or images in the repository, in a clean and tidy manner.
+Make sure your final submission is in the `main` branch of your repository (this should be the default).
+Include a clear [`README.md`](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes) and a suitable [`.gitignore` file](https://github.com/github/gitignore).
+Avoid including [unnecessary files or folders](https://realpython.com/python-git-github-intro/#what-not-to-add-to-a-git-repo).
+Use lowercase file and folder names, except for files like `README.md`.
+Do not use spaces or special characters in filenames.
+Underscores, hyphens, and full stops are okay.
 
 ## Tasks
 
-Add a Jupyter notebook named `tasks.ipynb` at the root of the repository.
-You should complete all tasks in this single notebook.
-The tasks are outlined in **[tasks.md](tasks.md)**.
+Create a notebook called `tasks.ipynb` in the root of the repository.
+Complete all tasks detailed in **[tasks.md](tasks.md)** in this notebook.
 
-Use Markdown headings to clearly identify each task within the notebook.
-Break up your code into smaller, manageable cells whenever possible.
-Each code cell should focus on a single step in your overall solution.
+Keep your notebook [reproducible, clean and concise.](https://arxiv.org/pdf/2202.07233)
+Use a [level 1 heading](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#headings) for the notebook title.
+Use [level 2 Markdown headings](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#headings) to clearly identify each task within the notebook.
 Use Markdown cells to give explanations and insights into your code.
-
-Include comments in all code cells to tell the reader what each statement does.
-Write clean, readable, and efficient code using meaningful variable names and consistent formatting.
 Follow Python coding standards and guidelines such as [PEP8](https://peps.python.org/pep-0008/).
+Write clean, readable, and efficient code using meaningful variable names and consistent formatting.
+
+Break code into smaller, manageable cells whenever possible.
+Each code cell should focus on a single step in your overall solution.
+Comment your code to explain what each line does.
 You can use [modules in the standard library](https://en.wikipedia.org/wiki/Standard_library).
 You may also use any of the packages in the [requirements.txt file in this repository](../requirements.txt) and their dependencies.
 Ask before using anything else.
 
+## Target Audience
+
+Create your submission with the following target audience in mind: an informed computing professional, such as a prospective employer.
+Assume they have a strong background in computing but may not be familiar with the specific language, packages, or tools you use.
+
+A reviewer should be able to clone your repository and run any code within it with minimal setup.
+Include setup instructions in your `README.md`, and all necessary data files and images, clearly organized.
+If any files are too large to include in your repository, explain this in your README.
+Where possible, provide code to automatically download them.
+
 ## Feedback and Consistency
 
-You are expected to work on your submission throughout the semester, pushing regular commits to GitHub.
-Your commit history should demonstrate how your solution to each task evolved, with evidence of incremental improvements, clarifications, and revisions.
-At any stage in the semester, you should be able to explain your work to date.
+Work on your repository throughout the semester and commit regularly.
+Your commit history should show how your work evolved: improvements, refinements, and added clarity.
+You will receive mid-semester feedback on your repository.
+To be eligible, make sure you’ve submitted the repository URL and pushed your commits.
 
-Feedback on submitted repositories will be given mid-semester.
-To receive this feedback, make sure you have submitted your repository URL and pushed your commits.
-If you encounter issues with git, seek help well before the deadline.
-Do not delete any files or commits without first consulting the lecturer.
-Very large commits, especially late in the semester, will not be accepted.
+If you have issues with Git, ask for help early.
+Do not delete files or commits without consulting your lecturer.
+Large, last-minute commits will not be accepted.
 
 ## Marking Scheme  
 
 Your submission will be assessed across the following five equally-weighted categories.
 Your mark will be based only on the contents of your repository.
 Make sure it provides clear evidence of the criteria listed.
+
+Remember to keep the target audience in mind.
 A good submission will meet most of the criteria in each category.
 An excellent submission will demonstrably meet all the criteria.
-Remember to keep the target audience in mind.
-The overall impression your submission creates may influence marks in each category.
+Note that the overall impression your submission creates may influence marks in each category.
 
 ### Presentation  
 
@@ -108,4 +115,5 @@ The overall impression your submission creates may influence marks in each categ
 - Your commit history should demonstrate your refinement of both code and explanations over time.
 
 ***
+
 **End**
