@@ -6,7 +6,7 @@
 This assessment is an opportunity to demonstrate that you have achieved the learning outcomes for this module.
 You will complete problems in a single Jupyter notebook, submitted in a GitHub repository created solely for this assessment.
 Start early and make consistent progress each week.
-Refer to the [FAQ](faq.ipynb) for further guidance.
+Refer to the [assessment guidance notebook](guidance.ipynb) for further guidance.
 If you have questions, ask them well before the deadline.
 
 ## Submission
