@@ -1,6 +1,6 @@
 # Emerging Technologies
 
-Emerging Technologies runs from September to December 2025 at [ATU](https://www.atu.ie).
+This repository contains details for the assessment period July-August 2025.
 
 ![Logicians](images/emerging_technologies.png)  
 Portraits by [mattleadbeater](https://www.instagram.com/mattleadbeater/).
