@@ -1,6 +1,6 @@
 # Tasks
 
-Make sure to re-read the [assessment instructions](instructions.md) regularly.  
+Carefully follow the [assessment instructions](instructions.md) to make sure you complete the following tasks in the correct way.  
 
 ## Task 1: The Task  
 
