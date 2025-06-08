@@ -19,7 +19,7 @@ The aim of this module is to enable you to demonstrate your ability to:
 
 ## Assessment
 
-The assessment is detailed in [instructions.md](assessment/instructions.md) in the assessment folder.  
+The assessment is detailed in [assessment.md](assessment/assessment.md) in the assessment folder.  
 
 ## Learning Materials
 

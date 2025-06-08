@@ -4,7 +4,7 @@
 **Emerging Technologies**
 
 This assessment is an opportunity to demonstrate that you have achieved the learning outcomes for this module.
-You will complete tasks in a single Jupyter notebook, submitted in a GitHub repository created solely for this assessment.
+You will complete problems in a single Jupyter notebook, submitted in a GitHub repository created solely for this assessment.
 Start early and make consistent progress each week.
 Refer to the [FAQ](faq.ipynb) for further guidance.
 If you have questions, ask them well before the deadline.
@@ -30,12 +30,12 @@ Underscores, hyphens, and full stops are okay.
 
 ## Tasks
 
-Create a notebook called `tasks.ipynb` in the root of the repository.
-Complete all tasks detailed in **[tasks.md](tasks.md)** in this notebook.
+Create a notebook called `problems.ipynb` in the root of the repository.
+Complete all problems detailed in **[problems.md](problems.md)** in this notebook.
 
 Keep your notebook [reproducible, clean and concise.](https://arxiv.org/pdf/2202.07233)
 Use a [level 1 heading](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#headings) for the notebook title.
-Use [level 2 Markdown headings](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#headings) to clearly identify each task within the notebook.
+Use [level 2 Markdown headings](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#headings) to clearly identify each problem within the notebook.
 Use Markdown cells to give explanations and insights into your code.
 Follow Python coding standards and guidelines such as [PEP8](https://peps.python.org/pep-0008/).
 Write clean, readable, and efficient code using meaningful variable names and consistent formatting.
@@ -110,7 +110,7 @@ Note that the overall impression your submission creates may influence marks in 
 ### Consistency  
 
 - Your commit history should show detailed, incremental changes over time.  
-- There should be evidence of steady progress on tasks throughout the semester, rather than last-minute submissions.  
+- There should be evidence of steady progress throughout the semester, rather than last-minute submissions.  
 - Your repository should reflect a process of review and refinement, demonstrating continuous improvement.  
 - Your commit history should demonstrate your refinement of both code and explanations over time.
 
