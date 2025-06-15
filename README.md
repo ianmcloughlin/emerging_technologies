@@ -2,8 +2,7 @@
 
 This repository contains details for the assessment period July-August 2025.
 
-![Logicians](images/emerging_technologies.png)  
-Portraits by [mattleadbeater](https://www.instagram.com/mattleadbeater/).
+[![Adapted from Art by Matt Leadbeater](https://raw.githubusercontent.com/ianmcloughlin/images/master/banner_emerging_technologies.png)](https://www.instagram.com/mattleadbeater/)
 
 ## Purpose
 
