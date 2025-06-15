@@ -28,7 +28,7 @@ Use lowercase file and folder names, except for files like `README.md`.
 Do not use spaces or special characters in filenames.
 Underscores, hyphens, and full stops are okay.
 
-## Tasks
+## Problems
 
 Create a notebook called `problems.ipynb` in the root of the repository.
 Complete all problems detailed in **[problems.md](problems.md)** in this notebook.
